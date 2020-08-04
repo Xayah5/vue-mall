@@ -1,8 +1,18 @@
 <template>
   <div class="home">
-    <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-      <van-swipe-item v-for="item in lunbolist" :key="item.id">
-        <img :src="item.img" alt="">
+    <van-swipe
+      class="my-swipe"
+      :autoplay="3000"
+      indicator-color="white"
+    >
+      <van-swipe-item
+        v-for="item in lunbolist"
+        :key="item.id"
+      >
+        <img
+          :src="item.img"
+          alt=""
+        >
       </van-swipe-item>
     </van-swipe>
     <!-- 九宫格区域 -->
@@ -12,6 +22,7 @@
         :key="grid.id"
         :icon="grid.src"
         :text="grid.title"
+        :to="grid.to"
       />
     </van-grid>
   </div>
