@@ -19,5 +19,13 @@ Vue.prototype.Api = {
   // 获取图文资讯详情
   getNewsInfo(params) {
     return axios.get('/api/getnew/' + params)
+  },
+  // 获取图文资讯评论信息
+  getComments({ id, page = 1, pageSize = 2 }) {
+    return axios.get(`/api/getcomments/${id}?pageindex=${page}&limit=${pageSize}`)
+  },
+  // 添加评论数据
+  postComment({ id, content }) {
+    return axios.post(`/api/postcomment/${id}`, { content })
   }
 }

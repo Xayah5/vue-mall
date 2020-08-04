@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Toast, NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, Grid, GridItem, Card } from 'vant'
+import { Toast, NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, Grid, GridItem, Card, Button } from 'vant'
 
 Vue
   .use(NavBar)
@@ -7,4 +7,6 @@ Vue
   .use(Swipe).use(SwipeItem)
   .use(Grid).use(GridItem)
   .use(Card)
+  .use(Button)
+
 Vue.prototype.$Toast = Toast

@@ -12,9 +12,12 @@
     <div class="content">
       {{newsinfo.content}}
     </div>
+    <comments :id="id"></comments>
   </div>
 </template>
 <script>
+import comments from '@/components/Comment'
+
 export default {
   data: () => ({
     id: '',
@@ -28,12 +31,14 @@ export default {
     async getNewsInfo() {
       try {
         const { data: { message } } = await this.Api.getNewsInfo(this.id)
-        console.log(message)
         this.newsinfo = message
       } catch (error) {
         this.$Toast('请求图文资讯详情数据失败...' + error.message)
       }
     }
+  },
+  components: {
+    comments
   }
 }
 </script>
