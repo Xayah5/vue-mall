@@ -7,6 +7,8 @@ import Cart from '../views/Cart'
 import Friends from '../views/Friends'
 import NewsList from '../views/Home/news/NewsList'
 import NewsInfo from '../views/Home/news/NewsInfo'
+import PhotoList from '../views/Home/photos/PhotoList'
+import PhotoInfo from '../views/Home/photos/PhotoInfo'
 
 Vue.use(VueRouter)
 
@@ -38,6 +40,14 @@ const routes = [
   {
     path: '/home/newsinfo/:id',
     component: NewsInfo
+  },
+  {
+    path: '/home/photolist',
+    component: PhotoList
+  },
+  {
+    path: '/home/photoinfo/:id',
+    component: PhotoInfo
   }
 ]
 

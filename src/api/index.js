@@ -27,5 +27,21 @@ Vue.prototype.Api = {
   // 添加评论数据
   postComment({ id, content }) {
     return axios.post(`/api/postcomment/${id}`, { content })
+  },
+  // 获取图片分类数据
+  getImgCategory(params) {
+    return axios.get('/api/getimgcategory', params)
+  },
+  // 获取图片列表数据
+  getImages(id) {
+    return axios.get('/api/getimages/' + id)
+  },
+  // 获取图片详情
+  getImageInfo(id) {
+    return axios.get('/api/getimageInfo/' + id)
+  },
+  // 获取图片详情的缩略图
+  getThumImages(id) {
+    return axios.get('/api/getthumimages/' + id)
   }
 }
