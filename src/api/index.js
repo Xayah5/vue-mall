@@ -43,5 +43,18 @@ Vue.prototype.Api = {
   // 获取图片详情的缩略图
   getThumImages(id) {
     return axios.get('/api/getthumimages/' + id)
+  },
+  // 获取商品列表信息
+  getGoods({ page, pageSize }) {
+    return axios.get(`/api/getgoods?pageindex=${page}&limit=${pageSize}`)
+  },
+  // 获取商品列表信息
+  getGoodsInfo(id) {
+    return axios.get(`/api/goods/getinfo/${id}`)
+  },
+  // 获取购物车列表信息
+  getshopcarlist(params) {
+    return axios.get('/api/goods/getshopcarlist/' + params)
   }
+
 }

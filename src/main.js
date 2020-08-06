@@ -4,6 +4,7 @@ import router from './router'
 import './plugins/vantUI'
 import './api'
 import mixin from './mixins/index'
+import './filter'
 
 Vue.use(mixin)
 

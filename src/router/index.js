@@ -9,6 +9,8 @@ import NewsList from '../views/Home/news/NewsList'
 import NewsInfo from '../views/Home/news/NewsInfo'
 import PhotoList from '../views/Home/photos/PhotoList'
 import PhotoInfo from '../views/Home/photos/PhotoInfo'
+import GoodsList from '../views/Home/goods/GoodsList'
+import GoodsInfo from '../views/Home/goods/GoodsInfo'
 
 Vue.use(VueRouter)
 
@@ -48,6 +50,14 @@ const routes = [
   {
     path: '/home/photoinfo/:id',
     component: PhotoInfo
+  },
+  {
+    path: '/home/goodslist',
+    component: GoodsList
+  },
+  {
+    path: '/home/goodsinfo/:id',
+    component: GoodsInfo
   }
 ]
 

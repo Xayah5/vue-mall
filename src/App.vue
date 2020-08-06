@@ -6,6 +6,7 @@
       left-text="返回"
       left-arrow
       fixed
+      @click-left="onClickLeft"
     />
     <!-- 路由区域 -->
     <router-view />
@@ -39,7 +40,11 @@ export default {
     active: '0'
   }),
   created() {},
-  methods: {}
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 <style>

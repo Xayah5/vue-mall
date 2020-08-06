@@ -1,20 +1,6 @@
 <template>
   <div class="home">
-    <van-swipe
-      class="my-swipe"
-      :autoplay="3000"
-      indicator-color="white"
-    >
-      <van-swipe-item
-        v-for="item in lunbolist"
-        :key="item.id"
-      >
-        <img
-          :src="item.img"
-          alt=""
-        >
-      </van-swipe-item>
-    </van-swipe>
+    <Swiper :lunbolist='lunbolist'></Swiper>
     <!-- 九宫格区域 -->
     <van-grid :column-num="3">
       <van-grid-item
@@ -28,6 +14,7 @@
   </div>
 </template>
 <script>
+import Swiper from '../../components/Swiper'
 export default {
   data: () => ({
     lunbolist: [],
@@ -54,6 +41,9 @@ export default {
         this.$Toast('九宫格请求失败...')
       }
     }
+  },
+  components: {
+    Swiper
   }
 }
 </script>

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Toast, NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, Grid, GridItem, Card, Button, Tab, Tabs, Lazyload, ImagePreview } from 'vant'
+import { Toast, NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, Grid, GridItem, Card, Button, Tab, Tabs, Lazyload, ImagePreview, Panel, Stepper } from 'vant'
 
 Vue
   .use(NavBar)
@@ -10,6 +10,8 @@ Vue
   .use(Button)
   .use(Tab)
   .use(Tabs)
+  .use(Panel)
+  .use(Stepper)
 // 注册时可以配置额外的选项
 Vue.use(Lazyload, {
   loading: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0Hh9GvOw4qZIhB4hrShE8YDvFEcJ_c_LHFQ&usqp=CAU',
