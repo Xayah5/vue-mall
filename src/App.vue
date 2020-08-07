@@ -24,7 +24,7 @@
       <van-tabbar-item
         icon="cart-o"
         to="/cart"
-        badge="0"
+        :badge="$store.getters.getAllCount"
       >cart</van-tabbar-item>
       <van-tabbar-item
         icon="search"
@@ -37,7 +37,7 @@
 <script>
 export default {
   data: () => ({
-    active: '0'
+    active: 0
   }),
   created() {},
   methods: {
@@ -46,6 +46,7 @@ export default {
     }
   }
 }
+// talk is cheap show me the code
 </script>
 <style>
 .app{

@@ -51,10 +51,10 @@ Vue.prototype.Api = {
   // 获取商品列表信息
   getGoodsInfo(id) {
     return axios.get(`/api/goods/getinfo/${id}`)
-  },
-  // 获取购物车列表信息
-  getshopcarlist(params) {
-    return axios.get('/api/goods/getshopcarlist/' + params)
   }
+  // 获取购物车列表信息
+  // getshopcarlist(params) {
+  //   return axios.get('/api/goods/getshopcarlist/' + params)
+  // }
 
 }

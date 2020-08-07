@@ -89,6 +89,7 @@ export default {
       el.offsetTop
       el.style.transform = `translate(${x}px,${y}px)`
       el.style.transition = 'all .5s ease'
+      done()
     },
     afterEnter() {
       this.isBall = !this.isBall
@@ -124,6 +125,24 @@ export default {
       setInterval(() => {
         this.isDisabled = false
       }, 600)
+
+      const goodsinfo = {
+        // 数量
+        count: this.value,
+        // id
+        id: this.$route.params.id,
+        // 是否选中
+        selected: true,
+        // 价格
+        sell_price: this.goodsInfo.sell_price,
+        // 图片
+        src: this.lunbolist[0].src,
+        // 时间
+        timer: null,
+        // 标题
+        title: this.goodsInfo.title
+      }
+      this.$store.dispatch('addCart', goodsinfo)
     }
 
   },
